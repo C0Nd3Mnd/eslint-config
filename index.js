@@ -3,10 +3,6 @@ const WARN = 1
 const OFF = 0
 
 module.exports = {
-  root: true,
-  env: {
-    node: true
-  },
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'prettier', 'jsdoc'],
   extends: [
@@ -24,39 +20,40 @@ module.exports = {
   },
   rules: {
     // Basic
+    'camelcase': WARN,
     'max-len': OFF,
-    'eqeqeq': ERROR,
+    'eqeqeq': WARN,
     'no-else-return': [
-      ERROR,
+      WARN,
       {
         allowElseIf: false
       }
     ],
-    'lines-between-class-members': [ERROR, 'always'],
-    'curly': [ERROR, 'all'],
-    'no-lonely-if': ERROR,
+    'lines-between-class-members': [WARN, 'always'],
+    'curly': [WARN, 'all'],
+    'no-lonely-if': WARN,
     'no-console': WARN,
-    'no-alert': ERROR,
-    'no-caller': ERROR,
-    'no-eval': ERROR,
-    'no-labels': ERROR,
-    'no-implied-eval': ERROR,
-    'no-lone-blocks': ERROR,
-    'no-return-assign': ERROR,
-    'no-return-await': ERROR,
-    'no-script-url': ERROR,
-    'no-self-compare': ERROR,
-    'no-sequences': ERROR,
-    'no-throw-literal': ERROR,
-    'no-unused-expressions': ERROR,
-    'no-useless-call': ERROR,
-    'no-useless-concat': ERROR,
-    'no-useless-return': ERROR,
-    'no-void': ERROR,
-    'require-await': ERROR,
+    'no-alert': WARN,
+    'no-caller': WARN,
+    'no-eval': WARN,
+    'no-labels': WARN,
+    'no-implied-eval': WARN,
+    'no-lone-blocks': WARN,
+    'no-return-assign': WARN,
+    'no-return-await': WARN,
+    'no-script-url': WARN,
+    'no-self-compare': WARN,
+    'no-sequences': WARN,
+    'no-throw-literal': WARN,
+    'no-unused-expressions': WARN,
+    'no-useless-call': WARN,
+    'no-useless-concat': WARN,
+    'no-useless-return': WARN,
+    'no-void': WARN,
+    'require-await': WARN,
     // Prettier
     'prettier/prettier': [
-      ERROR,
+      WARN,
       {
         printWidth: 80,
         tabWidth: 2,
@@ -112,7 +109,7 @@ module.exports = {
     // TypeScript
     '@typescript-eslint/indent': OFF,
     '@typescript-eslint/member-delimiter-style': [
-      ERROR,
+      WARN,
       {
         multiline: {
           delimiter: 'none',
@@ -125,16 +122,16 @@ module.exports = {
       }
     ],
     '@typescript-eslint/explicit-member-accessibility': [
-      ERROR,
+      WARN,
       {
         accessibility: 'explicit'
       }
     ],
-    '@typescript-eslint/explicit-function-return-type': ERROR,
-    '@typescript-eslint/no-explicit-any': ERROR,
-    '@typescript-eslint/no-non-null-assertion': ERROR,
-    '@typescript-eslint/no-unused-vars': ERROR,
+    '@typescript-eslint/explicit-function-return-type': WARN,
+    '@typescript-eslint/no-explicit-any': WARN,
+    '@typescript-eslint/no-non-null-assertion': WARN,
+    '@typescript-eslint/no-unused-vars': WARN,
     // ESLint Comments
-    'eslint-comments/no-use': ERROR
+    'eslint-comments/no-use': WARN
   }
 }
