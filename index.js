@@ -3,11 +3,9 @@ const WARN = 1
 const OFF = 0
 
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'prettier', 'jsdoc'],
+  plugins: ['prettier', 'jsdoc'],
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:eslint-comments/recommended'
   ],
   settings: {
@@ -74,7 +72,7 @@ module.exports = {
     'jsdoc/check-syntax': WARN,
     'jsdoc/check-tag-names': WARN,
     'jsdoc/newline-after-description': WARN,
-    'jsdoc/no-types': WARN,
+    'jsdoc/no-types': OFF,
     'jsdoc/require-description-complete-sentence': WARN,
     'jsdoc/require-description': WARN,
     'jsdoc/require-example': OFF,
@@ -91,46 +89,19 @@ module.exports = {
           MethodDefinition: true
         },
         contexts: [
-          'ClassProperty',
-          'TSInterfaceDeclaration',
-          'TSPropertySignature'
+          'ClassProperty'
         ]
       }
     ],
     'jsdoc/require-param-description': WARN,
     'jsdoc/require-param-name': WARN,
-    'jsdoc/require-param-type': OFF,
+    'jsdoc/require-param-type': WARN,
     'jsdoc/require-param': WARN,
     'jsdoc/require-returns-check': WARN,
     'jsdoc/require-returns-description': WARN,
-    'jsdoc/require-returns-type': OFF,
+    'jsdoc/require-returns-type': WARN,
     'jsdoc/require-returns': WARN,
     'jsdoc/valid-types': OFF,
-    // TypeScript
-    '@typescript-eslint/indent': OFF,
-    '@typescript-eslint/member-delimiter-style': [
-      WARN,
-      {
-        multiline: {
-          delimiter: 'none',
-          requireLast: false
-        },
-        singleline: {
-          delimiter: 'comma',
-          requireLast: false
-        }
-      }
-    ],
-    '@typescript-eslint/explicit-member-accessibility': [
-      WARN,
-      {
-        accessibility: 'explicit'
-      }
-    ],
-    '@typescript-eslint/explicit-function-return-type': WARN,
-    '@typescript-eslint/no-explicit-any': WARN,
-    '@typescript-eslint/no-non-null-assertion': WARN,
-    '@typescript-eslint/no-unused-vars': WARN,
     // ESLint Comments
     'eslint-comments/no-use': WARN
   }

@@ -1,6 +1,6 @@
 {
   "name": "@c0nd3mnd/eslint-config",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "My personally preferred ESLint rules.",
   "main": "index.js",
   "scripts": {
@@ -21,8 +21,6 @@
   },
   "homepage": "https://github.com/C0Nd3Mnd/eslint-config#readme",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^4.24.0",
-    "@typescript-eslint/parser": "^4.24.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-jsdoc": "^34.8.2",
     "eslint-plugin-prettier": "^3.4.0",
